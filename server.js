@@ -8,9 +8,11 @@ const app = express();
 const PORT = process.env.PORT || 8080; // Step 1
 
 const routes = require('./routes/api');
+const MONGODB_URI = 'mongodb+srv://harmanpreet:Oram012@pdb.30gf9am.mongodb.net/?retryWrites=true&w=majority'
 
 // Step 2
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_youtube', {
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mern_youtube', {
+mongoose.connect(MONGODB_URI || 'mongodb://localhost/mern_youtube', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

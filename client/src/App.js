@@ -9,6 +9,7 @@ class App extends React.Component {
   state = {
     title: '',
     body: '',
+    disc:'',
     posts: []
   };
 
@@ -29,52 +30,17 @@ class App extends React.Component {
       });
   }
 
-  handleChange = ({ target }) => {
-    const { name, value } = target;
-    this.setState({ [name]: value });
-  };
-
-
-  submit = (event) => {
-    event.preventDefault();
-
-    const payload = {
-      title: this.state.title,
-      body: this.state.body
-    };
-
-
-    axios({
-      url: '/api/save',
-      method: 'POST',
-      data: payload
-    })
-      .then(() => {
-        console.log('Data has been sent to the server');
-        this.resetUserInputs();
-        this.getBlogPost();
-      })
-      .catch(() => {
-        console.log('Internal server error');
-      });;
-  };
-
-  resetUserInputs = () => {
-    this.setState({
-      title: '',
-      body: ''
-    });
-  };
-
   displayBlogPost = (posts) => {
 
     if (!posts.length) return null;
 
 
     return posts.map((post, index) => (
-      <div key={index} className="blog-post__display">
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
+      <div key={index} className="productCard">
+        <div className='productImg'>ImageHere</div>
+        <h3 className="productTitle">{post.title}</h3>
+        <div className="productDisc">{post.disc}</div>
+        <p className='productCost'>Quantity:  - {post.price}</p>
       </div>
     ));
   };
@@ -86,35 +52,15 @@ class App extends React.Component {
     //JSX
     return(
       <div className="app">
-        <h2>Welcome to the best app ever</h2>
-        <form onSubmit={this.submit}>
-          <div className="form-input">
-            <input 
-              type="text"
-              name="title"
-              placeholder="Title"
-              value={this.state.title}
-              onChange={this.handleChange}
-            />
+        <div className='container'>
+          <div className='header'>
+            <h2>CarGo <span>🚚</span> </h2>
+            {/* <div>serach bar</div> */}
           </div>
-          <div className="form-input">
-            <textarea
-              placeholder="body"
-              name="body"
-              cols="30"
-              rows="10"
-              value={this.state.body}
-              onChange={this.handleChange}
-            >
-              
-            </textarea>
+            
+          <div className="productBox">
+            {this.displayBlogPost(this.state.posts)}
           </div>
-
-          <button>Submit</button>
-        </form>
-
-        <div className="blog-">
-          {this.displayBlogPost(this.state.posts)}
         </div>
       </div>
     );

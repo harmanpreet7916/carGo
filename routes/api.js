@@ -38,8 +38,8 @@ router.post('/save', (req, res) => {
 
 router.get('/name', (req, res) => {
     const data =  {
-        username: 'peterson',
-        age: 5
+        username: 'harmanpreet',
+        age: 21
     };
     res.json(data);
 });

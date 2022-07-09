@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const BlogPostSchema = new Schema({
     title: String,
-    body: String,
+    price: String,
+    disc: String,
     date: {
         type: String,
         default: Date.now()

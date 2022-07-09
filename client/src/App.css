@@ -1,41 +1,67 @@
 .app {
-  padding: 10px;
+  padding: 0;
+  margin: 0px;
+  background-color: #e5e2db;
 }
-
-
-form {
-  width: 50%;
-}
-
-.form-input {
-  margin: 10px 0px;
-}
-
-.form-input input, .form-input textarea {
-  width: 100%;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  border: 1px solid lightgray;
-  padding: .375rem .75rem;
-  outline: none;
+.header{
+  display: flex;
+  background-color: #4a4b4f;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 60px;
+  color: #edeef2;
   
 }
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  cursor: pointer;
-  outline: none;
+.productBox{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  align-items: center;
+  justify-content: center;
 }
-
-.blog-post__display {
-  border: 1px solid lightgrey;
-  margin: 5px 0px;
-  border-radius: 4px;
+.productCard{
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #404041;
+  margin:  5px auto;
+  border-radius: 8px;
   padding: 10px;
+  width: 300px;
+  height: 25em;
+}
+.productImg{
+  font-weight: bolder;
+  background-color: wheat;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.productTitle{
+  font-weight: bolder;
+  text-align: center;
+  color: #d7cffe;
+  background-color: #4a4b4f;
+  border-radius: 8px;
+}
+.productDisc{
+  font-size: small;
+  font-weight: lighter;
+  overflow: cover;
+  height: 50px;
+  overflow:hidden;
+  color: white;
+  padding: 5px;
+  margin: auto;
+
+}
+.productCost{
+  text-align: center;
+  font-weight: bold;
+  height: 25px;
+  border-radius: 8px ;
+  background-color: #c8f4c3;
+  color: #0bab7b;
+  cursor: pointer;
 }
