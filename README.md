@@ -1,15 +1,14 @@
-### Build a MERN (MongoDB | Express | ReactJS | Nodejs) stack app from scratch
+# CarGo
+In this project the product information is fetched form database(mongodb) and displayed on react app
 
-| Topics          | Videos                                                               | Date                |
-| -------         |:--------------------------------------------------------------------:| -------------------:|
-| Set up Reactjs and Nodejs structure | [video](https://youtu.be/bc2pOPeQyOs)| November 18th 2019 |
-| Run ReactJS and Nodejs in same terminal - Concurrently | [video](https://youtu.be/1REonFsWBbY)| November 18th, 2019 |
-| Git workflow | [video](https://www.youtube.com/watch?v=uvqlFuJWcXM)| November 18th, 2019 |
-| Connect to MongoDB Atlas Cluster with Mongoose | [video](https://youtu.be/OuCrHynro0w)| November 18th, 2019 |
-| Create & submit a form in Reactjs and resolved cors policy | [video](https://youtu.be/yITlR9vDXXo)| November 18th, 2019 |
-| Save data to MongoDB with Mongoose | [video](https://youtu.be/jwVCgueYcgE)| November 18th, 2019 |
-| Get/fetch data from MongoDB and display them in Reactjsh application | [video](https://youtu.be/Mfp94RjugWQ)| November 18th, 2019 |
-| Apply css styles to a ReactJS application | [video](https://youtu.be/xDsjAk54JSY)| November 18th, 2019 |
-| How to deploy a MERN Stack App to Heroku | [video](https://youtu.be/5PaUiPyBDJY)| November 18th, 2019 |
-| Connect MongoDB Atlas to your Heroku application | [video](https://youtu.be/imR9LlbG3pU)| November 18th, 2019 |
-| Enable automatic deployment to Heroku | [video](https://youtu.be/y_7czmJXK_c)| November 18th, 2019 |
+## steps to run the application
+1. Fork and clone the repo
+1. go into project folder `cd carGo`
+1. install node modules `npm install`
+1. now run the server with `node server.js` or `nodemon server.js`
+1. The server is running 
+1. to start the website go into clinte folder `cd clinte`
+1. install node modules `npm install` 
+1. after sucessfull installation run `npm start` to run the site
+note :- you need to make a local mongodb database with name as shown in below screenshot or you we can also make any online database
+![ss](https://user-images.githubusercontent.com/77985528/178110373-53fb3b43-17b7-413e-bddb-a6664d1c6e00.jpeg)
