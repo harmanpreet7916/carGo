@@ -14,11 +14,11 @@ class App extends React.Component {
   };
 
   componentDidMount = () => {
-    this.getBlogPost();
+    this.getProduct();
   };
 
 
-  getBlogPost = () => {
+  getProduct = () => {
     axios.get('/api')
       .then((response) => {
         const data = response.data;
@@ -30,7 +30,7 @@ class App extends React.Component {
       });
   }
 
-  displayBlogPost = (posts) => {
+  displayProduct = (posts) => {
 
     if (!posts.length) return null;
 
@@ -59,7 +59,7 @@ class App extends React.Component {
           </div>
             
           <div className="productBox">
-            {this.displayBlogPost(this.state.posts)}
+            {this.displayProduct(this.state.posts)}
           </div>
         </div>
       </div>

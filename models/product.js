@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // Schema
 const Schema = mongoose.Schema;
-const BlogPostSchema = new Schema({
+const ProductSchema = new Schema({
     title: String,
     price: String,
     disc: String,
@@ -14,6 +14,6 @@ const BlogPostSchema = new Schema({
 });
 
 // Model
-const BlogPost = mongoose.model('BlogPost', BlogPostSchema);
+const Product = mongoose.model('dataofproducts', ProductSchema);
 
-module.exports =  BlogPost;
+module.exports =  Product;
